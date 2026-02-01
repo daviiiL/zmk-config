@@ -81,6 +81,11 @@
                      , <&macro_tap &kp F10>
                      , <&macro_release &kp LCTRL &kp LALT>;
         };
+        gcc: gcc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp G &kp C &kp C>;
+        };
     };
 
     keymap {
@@ -130,10 +135,10 @@
 // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-&trans    &tty1  &tty2  &tty3   &tty4   &tty5                        &tty6       &tty7     &tty8     &tty9    &tty10    &trans
-&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&trans    &trans &trans &trans  &trans  &trans                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT    &trans    &trans
-&trans    &trans &trans &trans  &trans  &trans    &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
+&kp ESC   &tty1  &tty2  &tty3   &tty4   &tty5                        &tty6       &tty7     &tty8     &tty9    &tty10    &trans
+&kp END   &trans &trans &trans  &trans  &trans                       &trans      &trans    &kp UP    &trans   &trans    &trans
+&kp PSCRN &trans &trans &trans  &trans  &trans                       &trans      &kp LEFT  &kp DOWN  &kp RIGHT    &trans    &trans
+&kp LSHFT &trans &trans &trans  &trans  &trans    &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
             >;
 
