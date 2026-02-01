@@ -7,6 +7,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: M165437
       url-base: https://github.com/M165437
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -15,6 +17,9 @@ manifest:
       import: app/west.yml
     - name: nice-view-gem
       remote: M165437
-      # revision: 7794ebf 
+      # revision: 7794ebf
+    - name: zmk-nice-oled
+      remote: mctechnology17
+      revision: main
   self:
     path: config
