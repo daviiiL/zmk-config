@@ -9,6 +9,8 @@ manifest:
       url-base: https://github.com/M165437
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
+    - name: daviiiL
+      url-base: https://github.com/daviiiL
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -19,7 +21,7 @@ manifest:
       remote: M165437
       revision: 7794ebf
     - name: zmk-nice-oled
-      remote: mctechnology17
+      remote: daviiiL
       revision: main
   self:
     path: config
