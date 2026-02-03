@@ -1,7 +1,7 @@
 manifest:
   defaults:
-    # revision: v0.3
-    revision: main
+    revision: v0.3
+    # revision: main
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -17,7 +17,7 @@ manifest:
       import: app/west.yml
     - name: nice-view-gem
       remote: M165437
-      # revision: 7794ebf
+      revision: 7794ebf
     - name: zmk-nice-oled
       remote: mctechnology17
       revision: main
