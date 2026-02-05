@@ -5,9 +5,6 @@
 
 CONFIG_ZMK_SLEEP=y
 
-# Enable sensor support for battery monitoring
-CONFIG_SENSOR=y
-
 # Enable MPU
 CONFIG_ARM_MPU=y
 

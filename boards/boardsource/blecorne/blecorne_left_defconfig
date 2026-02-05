@@ -7,9 +7,6 @@ CONFIG_ZMK_SLEEP=y
 CONFIG_ZMK_STUDIO=y
 CONFIG_ZMK_STUDIO_LOCKING=n
 
-# Enable sensor support for battery monitoring
-CONFIG_SENSOR=y
-
 # Enable MPU
 CONFIG_ARM_MPU=y
 
