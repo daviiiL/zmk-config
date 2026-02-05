@@ -62,6 +62,8 @@
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &kp RET &mo 1   &mo 2 &kp SPACE &kp RALT
                         >;
+
+			label = "DEDAULT";
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
@@ -75,6 +77,8 @@
    &kp LSHFT  &trans       &trans       &term_copy   &term_paste  &trans         &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans
                                     &kp LGUI     &kp SPACE       &trans      &trans  &kp RET   &kp RALT
                         >;
+
+			label = "LOWER";
                 };
 
                 raise_layer {
@@ -89,6 +93,8 @@
    &kp LSHFT &vim_save_quit   &trans &vim_comment   &vim_vsplit   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
                              &kp LGUI &kp RET   &trans   &trans   &kp SPACE    &kp RALT
                         >;
+
+			label = "RAISE";
                 };
         };
 };
