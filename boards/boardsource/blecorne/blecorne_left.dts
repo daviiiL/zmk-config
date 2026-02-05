@@ -6,7 +6,13 @@
 #include "blecorne.dtsi"
 
 /{
-  
+    chosen {
+        zmk,battery = &vbatt;
+    };
+
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
