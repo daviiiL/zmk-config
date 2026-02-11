@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lily58 Keymap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #4ec9b0;
+            font-size: 2.5em;
+            letter-spacing: 3px;
+        }
+        .layer {
+            margin-bottom: 60px;
+        }
+        .layer-title {
+            text-align: center;
+            color: #569cd6;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #569cd6;
+            border-radius: 5px;
+        }
+        .keyboard {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .half {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .row {
+            display: flex;
+            gap: 8px;
+        }
+        .row-with-encoder {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .encoder-keys {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            justify-content: flex-end;
+            padding-bottom: 34px;
+        }
+        .encoder {
+            width: 50px;
+            height: 50px;
+            background: #3a2a3a;
+            border: 2px solid #9d6b9d;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: #c586c0;
+        }
+        .key {
+            width: 60px;
+            height: 60px;
+            background: #2d2d2d;
+            border: 2px solid #4ec9b0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: bold;
+            color: #d4d4d4;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s;
+        }
+        .key:hover {
+            background: #3d3d3d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+        }
+        .key.empty {
+            background: #1a1a1a;
+            border-color: #3d3d3d;
+            color: #555;
+        }
+        .key.special {
+            background: #264f78;
+            border-color: #569cd6;
+        }
+        .key.macro {
+            background: #5a3a5a;
+            border-color: #c586c0;
+        }
+        .thumb-row {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 8px;
+        }
+        .appendix {
+            margin-top: 60px;
+            padding: 30px;
+            background: #2d2d2d;
+            border: 2px solid #4ec9b0;
+            border-radius: 10px;
+        }
+        .appendix h2 {
+            color: #4ec9b0;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .macro-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .macro-item {
+            padding: 15px;
+            background: #1e1e1e;
+            border-left: 4px solid #c586c0;
+            border-radius: 5px;
+        }
+        .macro-name {
+            color: #c586c0;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .macro-desc {
+            color: #9cdcfe;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LILY58 KEYMAP</h1>
+
+        <div class="layer">
+            <div class="layer-title">LAYER 0 (DEFAULT)</div>
+            <div class="keyboard">
+                <div class="half">
+                    <div class="row">
+                        <div class="key">ESC</div>
+                        <div class="key">1</div>
+                        <div class="key">2</div>
+                        <div class="key">3</div>
+                        <div class="key">4</div>
+                        <div class="key">5</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">TAB</div>
+                        <div class="key">Q</div>
+                        <div class="key">W</div>
+                        <div class="key">E</div>
+                        <div class="key">R</div>
+                        <div class="key">T</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">ALT</div>
+                        <div class="key">A</div>
+                        <div class="key">S</div>
+                        <div class="key">D</div>
+                        <div class="key">F</div>
+                        <div class="key">G</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">SHIFT</div>
+                        <div class="key">Z</div>
+                        <div class="key">X</div>
+                        <div class="key">C</div>
+                        <div class="key">V</div>
+                        <div class="key">B</div>
+                    </div>
+                    <div class="thumb-row">
+                        <div class="key">CTRL</div>
+                        <div class="key">GUI</div>
+                        <div class="key">RET</div>
+                        <div class="key special">MO1</div>
+                    </div>
+                </div>
+                <div class="encoder-keys">
+                    <div class="encoder">[</div>
+                </div>
+                <div class="encoder-keys">
+                    <div class="encoder">]</div>
+                </div>
+                <div class="half">
+                    <div class="row">
+                        <div class="key">6</div>
+                        <div class="key">7</div>
+                        <div class="key">8</div>
+                        <div class="key">9</div>
+                        <div class="key">0</div>
+                        <div class="key">BSPC</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">Y</div>
+                        <div class="key">U</div>
+                        <div class="key">I</div>
+                        <div class="key">O</div>
+                        <div class="key">P</div>
+                        <div class="key">-</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">H</div>
+                        <div class="key">J</div>
+                        <div class="key">K</div>
+                        <div class="key">L</div>
+                        <div class="key">;</div>
+                        <div class="key">'</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">N</div>
+                        <div class="key">M</div>
+                        <div class="key">,</div>
+                        <div class="key">.</div>
+                        <div class="key">/</div>
+                        <div class="key">SHIFT</div>
+                    </div>
+                    <div class="thumb-row">
+                        <div class="key special">MO2</div>
+                        <div class="key">SPC</div>
+                        <div class="key">BSPC</div>
+                        <div class="key">GUI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer">
+            <div class="layer-title">LAYER 1 (LOWER)</div>
+            <div class="keyboard">
+                <div class="half">
+                    <div class="row">
+                        <div class="key special">BTCLR</div>
+                        <div class="key">F1</div>
+                        <div class="key">F2</div>
+                        <div class="key">F3</div>
+                        <div class="key">F4</div>
+                        <div class="key">F5</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">CAPS</div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                    <div class="row">
+                        <div class="key">~</div>
+                        <div class="key">!</div>
+                        <div class="key">@</div>
+                        <div class="key">#</div>
+                        <div class="key">$</div>
+                        <div class="key">%</div>
+                    </div>
+                    <div class="row">
+                        <div class="key empty"></div>
+                        <div class="key special">EP_ON</div>
+                        <div class="key special">EP_OF</div>
+                        <div class="key special">EP_TG</div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                    <div class="thumb-row">
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                </div>
+                <div class="encoder-keys">
+                    <div class="encoder empty"></div>
+                </div>
+                <div class="encoder-keys">
+                    <div class="encoder empty"></div>
+                </div>
+                <div class="half">
+                    <div class="row">
+                        <div class="key">F6</div>
+                        <div class="key">F7</div>
+                        <div class="key">F8</div>
+                        <div class="key">F9</div>
+                        <div class="key">F10</div>
+                        <div class="key">DEL</div>
+                    </div>
+                    <div class="row">
+                        <div class="key special">BT0</div>
+                        <div class="key special">BT1</div>
+                        <div class="key special">BT2</div>
+                        <div class="key special">BT3</div>
+                        <div class="key special">BT4</div>
+                        <div class="key">F12</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">^</div>
+                        <div class="key">&</div>
+                        <div class="key">*</div>
+                        <div class="key">(</div>
+                        <div class="key">)</div>
+                        <div class="key">`</div>
+                    </div>
+                    <div class="row">
+                        <div class="key empty"></div>
+                        <div class="key">-</div>
+                        <div class="key">+</div>
+                        <div class="key">{</div>
+                        <div class="key">}</div>
+                        <div class="key">|</div>
+                    </div>
+                    <div class="thumb-row">
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layer">
+            <div class="layer-title">LAYER 2 (RAISE)</div>
+            <div class="keyboard">
+                <div class="half">
+                    <div class="row">
+                        <div class="key">ESC</div>
+                        <div class="key macro">tty1</div>
+                        <div class="key macro">tty2</div>
+                        <div class="key macro">tty3</div>
+                        <div class="key macro">tty4</div>
+                        <div class="key macro">tty5</div>
+                    </div>
+                    <div class="row">
+                        <div class="key">END</div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                    <div class="row">
+                        <div class="key">PSCRN</div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                    <div class="row">
+                        <div class="key">SHIFT</div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                    <div class="thumb-row">
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                </div>
+                <div class="encoder-keys">
+                    <div class="encoder empty"></div>
+                </div>
+                <div class="encoder-keys">
+                    <div class="encoder empty"></div>
+                </div>
+                <div class="half">
+                    <div class="row">
+                        <div class="key macro">tty6</div>
+                        <div class="key macro">tty7</div>
+                        <div class="key macro">tty8</div>
+                        <div class="key macro">tty9</div>
+                        <div class="key macro">tty10</div>
+                        <div class="key empty"></div>
+                    </div>
+                    <div class="row">
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key">↑</div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                    <div class="row">
+                        <div class="key empty"></div>
+                        <div class="key">←</div>
+                        <div class="key">↓</div>
+                        <div class="key">→</div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                    <div class="row">
+                        <div class="key">+</div>
+                        <div class="key">-</div>
+                        <div class="key">=</div>
+                        <div class="key">[</div>
+                        <div class="key">]</div>
+                        <div class="key">\</div>
+                    </div>
+                    <div class="thumb-row">
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                        <div class="key empty"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="appendix">
+            <h2>MACRO APPENDIX</h2>
+            <div class="macro-list">
+                <div class="macro-item">
+                    <div class="macro-name">tty1-tty10</div>
+                    <div class="macro-desc">Switch TTY sessions</div>
+                </div>
+                <div class="macro-item">
+                    <div class="macro-name">gcc</div>
+                    <div class="macro-desc">Types "gcc"</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
