@@ -107,7 +107,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-	    layer = "DEFAULT";
+            label = "DEFAULT";
         };
 
         lower_layer {
@@ -126,7 +126,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-	    layer = "LOWER";
+            label = "LOWER";
         };
 
         raise_layer {
@@ -145,7 +145,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-	    layer = "RAISE";
+            label = "RAISE";
         };
     };
 };
